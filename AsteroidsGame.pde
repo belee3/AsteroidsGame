@@ -1,4 +1,4 @@
-SpaceShip ash = new SpaceShip
+SpaceShip ash = new SpaceShip (0);
 
 public void setup() 
 {
