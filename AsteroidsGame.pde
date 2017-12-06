@@ -1,4 +1,4 @@
-Spaceship ship= new Spaceship();
+Spaceship ash= new Spaceship();
 Stars[] stars = new Stars[100];
 Asteroids [] ast= new Asteroids [20];
 boolean move, rotateRight, rotateLeft, hyperspace;
@@ -20,38 +20,38 @@ public void draw()
   for(int r=0;r<ast.length;r++){ 
   ast[r].move();
   ast[r].show();}
-  ship.show();
+  ash.show();
   if(right){
-   ship.myCenterX += 6;
+   ash.myCenterX += 6;
   }
   if(left){
-   ship.myCenterX -= 6;
+   ash.myCenterX -= 6;
   }
   if(up){
-   ship.myCenterY -= 6;
+   ash.myCenterY -= 6;
   }
   if(down){
-   ship.myCenterY += 6;
+   ash.myCenterY += 6;
   }
-  if(ship.myCenterX<=9){
-    ship.myCenterX=489;
+  if(ash.myCenterX<=9){
+    ash.myCenterX=489;
   }
-  if(ship.myCenterX>=490){
-    ship.myCenterX=9;
+  if(ash.myCenterX>=490){
+    ash.myCenterX=9;
   }
-   if(ship.myCenterY<=9){
-    ship.myCenterY=489;
+   if(ash.myCenterY<=9){
+    ash.myCenterY=489;
   }
-  if(ship.myCenterY>=490){
-    ship.myCenterY=9;
+  if(ash.myCenterY>=490){
+    ash.myCenterY=9;
   }
   
   //if(move){ 
   //  ship.move();
   //  ship.accelerate(0.05);
   //}
-  if(rotateRight){ship.turn(6);}
-  if(rotateLeft){ship.turn(-6);}
+  if(rotateRight){ash.turn(6);}
+  if(rotateLeft){ash.turn(-6);}
   if(hyperspace){
     fill(0);
     noStroke();
@@ -74,10 +74,10 @@ public void keyPressed()
    
    if (key=='h'){
      hyperspace=true;
-     ship.setX((int)(Math.random()*500));
-     ship.setY((int)(Math.random()*500));
-     ship.setDirectionX(0);
-     ship.setDirectionY(0);
+     ash.setX((int)(Math.random()*500));
+     ash.setY((int)(Math.random()*500));
+     ash.setDirectionX(0);
+     ash.setDirectionY(0);
      move=false;
    }
 }
