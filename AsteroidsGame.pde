@@ -18,8 +18,8 @@ public void draw()
   background(0);
   for(int i=0;i<stars.length;i++) { stars[i].show(); }
   for(int r=0;r<ast.length;r++){ 
-  ast[r].move();
-  ast[r].show();}
+  ast.get(r).move();
+  ast.get(r).show();}
   ash.show();
   if(right){
    ash.myCenterX += 6;
