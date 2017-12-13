@@ -69,8 +69,8 @@ public void keyPressed()
    if (key=='a'){left = true;}
    if (key=='s'){down = true;}
    
-   if (key=='f'){rotateRight = true;}
-   if (key=='z'){rotateLeft = true;}
+   if (key=='e'){rotateRight = true;}
+   if (key=='q'){rotateLeft = true;}
    
    if (key=='h'){
      hyperspace=true;
@@ -87,8 +87,8 @@ public void keyReleased(){
    if (key=='w'){up=false;}
    if (key=='s'){down=false;}
    
-   if (key=='f'){rotateRight = false;}
-   if (key=='z'){rotateLeft = false;}
+   if (key=='e'){rotateRight = false;}
+   if (key=='q'){rotateLeft = false;}
    
    if (key=='h'){hyperspace=false;}
 }
