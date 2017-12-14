@@ -11,15 +11,15 @@ boolean right = false;
 public void setup(){
  size(500, 500);
  for(int i=0;i<stars.length;i++){ stars[i] = new Stars(); }
- for(int r=0;r<ast.length;r++){ ast[r] = new Asteroids(); }
+ for(int r=0;r<20;r++){ ast.add(new Asteroid()); }
 }
 public void draw()
 {
   background(0);
-  for(int i=0;i<stars.length;i++) { stars[i].show(); }
-  for(int r=0;r<ast.length;r++){ 
-  ast.get(r).move();
-  ast.get(r).show();}
+ for(int i=0;i<stars.length;i++) 
+  { 
+    stars[i].show();
+  }
   ash.show();
   if(right){
    ash.myCenterX += 6;
@@ -50,6 +50,16 @@ public void draw()
   //  ship.move();
   //  ship.accelerate(0.05);
   //}
+  for(int r=0;r<ast.size();r++){ 
+    float ship1 = dist(ship.getX(),ship.getY(),ast.get(r).getX(),ast.get(r).getY());
+    if(ship1< 20){
+      ast.remove(r);
+  }
+  else
+  {
+    ast.get(r).move();
+    ast.get(r).show();
+  }
   if(rotateRight){ash.turn(6);}
   if(rotateLeft){ash.turn(-6);}
   if(hyperspace){
