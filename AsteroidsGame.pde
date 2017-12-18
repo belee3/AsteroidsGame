@@ -2,6 +2,7 @@ Spaceship ash= new Spaceship();
 Stars[] stars = new Stars[100];
 //Asteroids [] ast= new Asteroids [20];
 ArrayList <Asteroid> ast = new ArrayList<Asteroid>();
+ArrayList <Bullet> Bullets = new ArrayList<Bullet>();
 boolean move, rotateRight, rotateLeft, hyperspace;
 
 boolean up = false;
