@@ -1,6 +1,7 @@
 Spaceship ash= new Spaceship();
 Stars[] stars = new Stars[100];
-Asteroids [] ast= new Asteroids [20];
+//Asteroids [] ast= new Asteroids [20];
+ArrayList <Asteroid> ast = new ArrayList<Asteroid>();
 boolean move, rotateRight, rotateLeft, hyperspace;
 
 boolean up = false;
@@ -51,8 +52,8 @@ public void draw()
   //  ship.accelerate(0.05);
   //}
   for(int r=0;r<ast.size();r++){ 
-    float ship1 = dist(ship.getX(),ship.getY(),ast.get(r).getX(),ast.get(r).getY());
-    if(ship1< 20){
+    float ash1 = dist(ash.getX(),ash.getY(),ast.get(r).getX(),ast.get(r).getY());
+    if(ash1< 20){
       ast.remove(r);
   }
   else
@@ -71,6 +72,7 @@ public void draw()
       ellipse(250,250,(float)(Math.random()*700),(float)(Math.random()*700));
     }
   }
+ }
 }
 public void keyPressed()
 {
