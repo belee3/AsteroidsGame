@@ -1,6 +1,5 @@
 Spaceship ash= new Spaceship();
 Stars[] stars = new Stars[100];
-//Asteroids [] ast= new Asteroids [20];
 ArrayList <Asteroid> ast = new ArrayList<Asteroid>();
 ArrayList <Bullet> Bullets = new ArrayList<Bullet>();
 boolean move, rotateRight, rotateLeft, hyperspace;
@@ -48,10 +47,6 @@ public void draw()
     ash.myCenterY=9;
   }
   
-  //if(move){ 
-  //  ship.move();
-  //  ship.accelerate(0.05);
-  //}
   for(int r=0;r<ast.size();r++){ 
     float ash1 = dist(ash.getX(),ash.getY(),ast.get(r).getX(),ast.get(r).getY());
     if(ash1< 20){
@@ -62,8 +57,8 @@ public void draw()
     ast.get(r).move();
     ast.get(r).show();
   }
-  if(rotateRight){ash.turn(6);}
-  if(rotateLeft){ash.turn(-6);}
+  if(rotateRight){ash.turn(4);}
+  if(rotateLeft){ash.turn(-4);}
   if(hyperspace){
     fill(0);
     noStroke();
