@@ -1,7 +1,7 @@
 Spaceship ash= new Spaceship();
 Stars[] stars = new Stars[100];
 ArrayList <Asteroid> ast = new ArrayList<Asteroid>();
-ArrayList <Bullet> Bullets = new ArrayList<Bullet>();
+ArrayList <Bullet> bullets = new ArrayList<Bullet>();
 boolean move, rotateRight, rotateLeft, hyperspace, fire;
 
 boolean up = false;
@@ -17,18 +17,18 @@ size(500,500);
 public void draw()
 {
   background(0);
-  if(fire)Bullets.add(new Bullet(ash));
-  for(int p=0; p<Bullets.size();p++){
-   Bullets.get(p).move();
-   Bullets.get(p).show();
-   Bullets.get(p).myCenterX += Bullets.get(p).myDirectionX;    
-   Bullets.get(p).myCenterY += Bullets.get(p).myDirectionY;  
-   if(Bullets.get(p).myCenterX==Bullets.get(p).myDirectionX&&Bullets.get(p).myCenterY==Bullets.get(p).myDirectionY){
-   Bullets.remove(p);
+  if(fire)bullets.add(new Bullet(ash));
+  for(int p=0; p<bullets.size();p++){
+   bullets.get(p).move();
+   bullets.get(p).show();
+   bullets.get(p).myCenterX += bullets.get(p).myDirectionX;    
+   bullets.get(p).myCenterY += bullets.get(p).myDirectionY;  
+   if(bullets.get(p).myCenterX==bullets.get(p).myDirectionX&&bullets.get(p).myCenterY==bullets.get(p).myDirectionY){
+   bullets.remove(p);
  }
  for(int o=0;o<ast.size();o++){  
-  if (dist(ast.get(o).getX(), ast.get(o).getY(), Bullets.get(p).getX(),Bullets.get(p).getY())<20){
-  Bullets.remove(p);
+  if (dist(ast.get(o).getX(), ast.get(o).getY(), bullets.get(p).getX(),bullets.get(p).getY())<20){
+  bullets.remove(p);
   ast.remove(o);
 break;
   }
