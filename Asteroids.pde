@@ -31,3 +31,4 @@ public class Asteroid extends Floater
     public double getPointDirection(){return myPointDirection;}
     
     
+}
