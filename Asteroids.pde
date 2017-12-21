@@ -1,8 +1,6 @@
-public class Asteroids extends Floater
+public class Asteroid extends Floater
 {
-  private int speedrotation;
-  
-  public Asteroids(){
+  public Asteroid(){
     corners =4;
     int[]xS= {8,-16,-8,16};
     int[]yS= {8,8,-8,-8};
@@ -33,4 +31,3 @@ public class Asteroids extends Floater
     public double getPointDirection(){return myPointDirection;}
     
     
-}
