@@ -9,11 +9,8 @@ boolean down = false;
 boolean left = false;
 boolean right = false;
 
-public void setting(){
-  size(500,500);
-}
-
 public void setup(){
+size(500,500);
  for(int i=0;i<stars.length;i++){ stars[i] = new Stars(); }
  for(int r=0;r<20;r++){ ast.add(new Asteroid()); }
 }
